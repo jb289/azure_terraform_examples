@@ -1,4 +1,7 @@
 #!/bin/sh
+echo "Logging in to Azure CLI"
+az login
+
 echo "Setting subscription"
 az account set --subscription="dd59b5e3-c62d-47cb-a1ba-965ea8ff2a7e"
 
