@@ -26,3 +26,8 @@ variable "tag_owner" {
   description = "Owner Tag Value"
 }
 
+variable "suffix" {
+  description = "Suffix"
+  default = ""
+}
+

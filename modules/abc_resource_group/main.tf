@@ -1,5 +1,5 @@
 resource "azurerm_resource_group" "rg" {
-        name = "rg-${var.sub_name}-${var.sub_loc_abbrev}-${var.system_name}"
+        name = "rg-${var.sub_name}-${var.sub_loc_abbrev}-${var.system_name}${var.suffix}"
         location = "${var.sub_loc}"
 
         tags = {
