@@ -35,8 +35,8 @@ module "rgcommon" {
 
     sub_name        = "${var.sub_name}"
 
-    sub_loc         = "${var.sub_loc_2}"
-    sub_loc_abbrev  = "${var.sub_loc_abbrev_2}"
+    sub_loc         = "${var.sub_loc_1}"
+    sub_loc_abbrev  = "${var.sub_loc_abbrev_1}"
 
     app_name        = "${var.app_name}"
     system_name     = "${var.system_name}"
