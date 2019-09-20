@@ -44,6 +44,6 @@ module "rgcommon" {
     tag_application = "${var.tag_application}"
     tag_owner       = "${var.tag_owner}"
 
-    suffix          = "-common"
+    suffix          = "common"
 }
 
