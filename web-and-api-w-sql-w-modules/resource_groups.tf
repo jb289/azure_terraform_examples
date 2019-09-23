@@ -1,5 +1,4 @@
-
-module "rg1" {
+module "resource_group_1" {
     source = "../modules/abc_resource_group"
 
     sub_name        = "${var.sub_name}"
@@ -15,7 +14,7 @@ module "rg1" {
 
 }
 
-module "rg2" {
+module "resource_group_2" {
     source = "../modules/abc_resource_group"
 
     sub_name        = "${var.sub_name}"
@@ -30,7 +29,7 @@ module "rg2" {
     tag_owner       = "${var.tag_owner}"
 }
 
-module "rgcommon" {
+module "resource_group_common" {
     source = "../modules/abc_resource_group"
 
     sub_name        = "${var.sub_name}"
