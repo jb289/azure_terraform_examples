@@ -2,12 +2,12 @@ variable "sub_name" {
   description = "Name of subscription"
 }
 
-variable "sub_loc" {
-  description = "Full location name"
-}
-
 variable "sub_loc_abbrev" {
   description = "Abbreviation of location"
+}
+
+variable "name_prefix" {
+  description = "Prefix of resource name (ex: api|wa)"
 }
 
 variable "system_name" {
@@ -18,16 +18,11 @@ variable "app_name" {
   description = "Application Name"
 }
 
-variable "tag_application" {
-  description = "Application Tag Value"
+variable "resource_group" {
+  description = "Resource Group Object"
 }
 
-variable "tag_owner" {
-  description = "Owner Tag Value"
-}
-
-variable "suffix" {
-  description = "Suffix"
-  default = ""
+variable "app_service_plan" {
+  description = "ASP for app service"
 }
 
