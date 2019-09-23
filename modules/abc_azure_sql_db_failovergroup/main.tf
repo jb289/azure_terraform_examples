@@ -1,5 +1,5 @@
 resource "azurerm_sql_server" "sql_server_primary" {
-  name                         = "asdb-${var.sub_name}-${var.sub_loc_abbrev_1}-${var.system_name}"
+  name                         = "asdbs-${var.sub_name}-${var.sub_loc_abbrev_1}-${var.system_name}"
   location                     = "${var.resource_group_1.location}"
   resource_group_name          = "${var.resource_group_1.name}"
   version                      = "12.0"
@@ -8,7 +8,7 @@ resource "azurerm_sql_server" "sql_server_primary" {
 }
 
 resource "azurerm_sql_server" "sql_server_secondary" {
-  name                         = "asdb-${var.sub_name}-${var.sub_loc_abbrev_2}-${var.system_name}"
+  name                         = "asdbs-${var.sub_name}-${var.sub_loc_abbrev_2}-${var.system_name}"
   location                     = "${var.resource_group_2.location}"
   resource_group_name          = "${var.resource_group_2.name}"
   version                      = "12.0"
@@ -24,7 +24,7 @@ resource "azurerm_sql_database" "sql_database_primary" {
   edition                      = "Standard"
 }
 
-resource "azurerm_sql_failover_group" "azurerm_sql_failover_group" {
+resource "azurerm_sql_failover_group" "sql_failover_group" {
   name                         = "asfg-${var.sub_name}-${var.sub_loc_abbrev_1}-${var.system_name}"
   resource_group_name          = "${var.resource_group_1.name}"
   server_name                  = "${azurerm_sql_server.sql_server_primary.name}"
