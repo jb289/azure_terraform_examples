@@ -9,6 +9,8 @@ module "web_app_service_1" {
 
     resource_group    = "${module.resource_group_1.resource_group}"
     app_service_plan  = "${module.app_service_plan_1.app_service_plan}"
+
+    application_insights_instrumentation_key = "${module.application_insights.instrumentation_key}"
 }
 
 module "web_app_service_2" {
@@ -22,4 +24,6 @@ module "web_app_service_2" {
 
     resource_group    = "${module.resource_group_2.resource_group}"
     app_service_plan  = "${module.app_service_plan_2.app_service_plan}"
+
+    application_insights_instrumentation_key = "${module.application_insights.instrumentation_key}"
 }

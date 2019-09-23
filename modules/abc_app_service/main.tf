@@ -12,7 +12,18 @@ resource "azurerm_app_service" "app" {
   }
 
   app_settings = {
-    "SOME_KEY" = "some-value"
+
+    "APPINSIGHTS_INSTRUMENTATIONKEY"                  = "${var.application_insights_instrumentation_key}"
+    "APPINSIGHTS_PROFILERFEATURE_VERSION"             = "1.0.0"
+    "APPINSIGHTS_SNAPSHOTFEATURE_VERSION"             = "1.0.0"
+    "ApplicationInsightsAgent_EXTENSION_VERSION"      = "~2"
+    "DiagnosticServices_EXTENSION_VERSION"            = "~3"
+    "InstrumentationEngine_EXTENSION_VERSION"         = "disabled"
+    "SOME_KEY"                                        = "some-value"
+    "SnapshotDebugger_EXTENSION_VERSION"              = "disabled"
+    "XDT_MicrosoftApplicationInsights_BaseExtensions" = "disabled"
+    "XDT_MicrosoftApplicationInsights_Mode"           = "recommended"
+
   }
 
   connection_string {

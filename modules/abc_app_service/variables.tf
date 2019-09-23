@@ -26,3 +26,6 @@ variable "app_service_plan" {
   description = "ASP for app service"
 }
 
+variable "application_insights_instrumentation_key" {
+  description = "Application Insights instrumentation key for the app service"
+}
