@@ -17,3 +17,7 @@ output "asp1" {
 output "asp2" {
   value = "${module.app_service_plan_2.app_service_plan}"
 }
+
+output "subscriptions" {
+  value = "${module.subscription_info.available_subscriptions}"
+}
