@@ -27,3 +27,19 @@ module "web_app_service_2" {
 
     application_insights_instrumentation_key = "${module.application_insights.instrumentation_key}"
 }
+
+resource "null_resource" "webhook_web_example" {
+  # Changes to the ids will cause this to re-provision
+  triggers = {
+    app_instance_ids = "${module.web_app_service_1.app_service.id},${module.web_app_service_2.app_service.id}"
+  }
+
+  provisioner "local-exec" {
+    command = "echo ********* LOCAL-EXEC - WEB APP 1 - ${module.web_app_service_1.app_service.default_site_hostname} *********"
+  }
+
+  provisioner "local-exec" {
+    command = "echo ********* LOCAL-EXEC - WEB APP 2 - ${module.web_app_service_2.app_service.default_site_hostname} *********"
+  }
+
+}

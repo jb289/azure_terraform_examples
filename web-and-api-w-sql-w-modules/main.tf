@@ -1,2 +1,7 @@
 provider "azurerm" {
 }
+
+provider "null" {
+}
+
+
